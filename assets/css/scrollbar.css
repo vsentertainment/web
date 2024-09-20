@@ -1,5 +1,5 @@
 ::-webkit-scrollbar {
-  width: 8px; /* Ancho de la barra de desplazamiento */
+  width: 12px; /* Ancho de la barra de desplazamiento */
 }
 
 ::-webkit-scrollbar-track {
@@ -11,4 +11,3 @@
   border-radius: 10px; /* Redondez del pulgar de desplazamiento */
   border: 2px solid var(--bs-gray-900); /* Espacio alrededor del pulgar */
 }
-
