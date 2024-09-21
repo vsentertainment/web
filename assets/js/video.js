@@ -10,3 +10,12 @@ playPauseButton.addEventListener('click', () => {
         playPauseButton.textContent = 'Reproducir';
     }
 });
+video.addEventListener('click', () => {
+    if (video.paused) {
+        video.play();
+        playPauseButton.textContent = 'Pausar';
+    } else {
+        video.pause();
+        playPauseButton.textContent = 'Reproducir';
+    }
+});
