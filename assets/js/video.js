@@ -2,7 +2,7 @@ const video = document.getElementById('videopl');
 const playPauseButton = document.getElementById('playPause');
 
 video.addEventListener('loadeddata', function () {
-    playPauseButton.style = '';
+    playPauseButton.removeAttribute("style");
 });
 playPauseButton.addEventListener('click', () => {
     if (video.paused) {
