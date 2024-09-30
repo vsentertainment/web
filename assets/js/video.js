@@ -1,5 +1,7 @@
 const video = document.getElementById('videopl');
 const playPauseButton = document.getElementById('playPause');
+var pausetxt = "Pausar";
+var playtxt = "Reproducir";
 
 video.addEventListener('loadeddata', function () {
     playPauseButton.removeAttribute("style");
@@ -7,18 +9,18 @@ video.addEventListener('loadeddata', function () {
 playPauseButton.addEventListener('click', () => {
     if (video.paused) {
         video.play();
-        playPauseButton.textContent = 'Pausar';
+        playPauseButton.textContent = pausetxt;
     } else {
         video.pause();
-        playPauseButton.textContent = 'Reproducir';
+        playPauseButton.textContent = playtxt;
     }
 });
 video.addEventListener('click', () => {
     if (video.paused) {
         video.play();
-        playPauseButton.textContent = 'Pausar';
+        playPauseButton.textContent = pausetxt;
     } else {
         video.pause();
-        playPauseButton.textContent = 'Reproducir';
+        playPauseButton.textContent = playtxt;
     }
 });
