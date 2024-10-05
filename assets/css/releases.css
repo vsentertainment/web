@@ -1,0 +1,16 @@
+:root {
+    --back-color: rgba(15, 15, 15, 0.268);
+}
+.targtop {
+    background-color: var(--back-color);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.targ {
+    background-color: var(--back-color);
+}
+.targbottom {
+    background-color: var(--back-color);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
