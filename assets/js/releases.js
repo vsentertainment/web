@@ -28,7 +28,7 @@ if (!isDataLoaded) {
 
         // Actualizar imagen
         const imgElement = document.getElementById(`img${trackNumber}`);
-        if (imgElement) imgElement.src = `../assets/img/tracks/${track.slug}.avif`;
+        if (imgElement) imgElement.src = `../assets/img/tracks/${track.slug}.webp`;
 
         // Actualizar enlace
         const linkElement = document.getElementById(`link${trackNumber}`);
