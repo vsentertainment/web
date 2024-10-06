@@ -1,7 +1,7 @@
 const video = document.getElementById('videopl');
 const playPauseButton = document.getElementById('playPause');
-var pausetxt = "Pausar";
-var playtxt = "Reproducir";
+let pausetxt = "Pausar";
+let playtxt = "Reproducir";
 
 video.addEventListener('loadeddata', function () {
     playPauseButton.removeAttribute("style");
