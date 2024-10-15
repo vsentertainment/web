@@ -59,10 +59,10 @@
     </div>
     <script>
         document.getElementById("goback-btn").addEventListener('click', () => {
-            if (history.back().toString.match("vsmusicgroup")) {
+            if (document.referrer.match(/vsmusicgroup/)) {
                 history.back();
             } else {
-                window.location.href = "vsmusicgroup.com";
+                window.location.href = "https://vsmusicgroup.com";
             }
         });
     </script>
