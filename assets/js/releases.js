@@ -49,7 +49,7 @@ tracks.forEach((track, index) => {
 
     const browser = navigator.userAgent;
 
-    if (!browser.match(/Android/i) || !browser.match(/webOS/i) || !browser.match(/iPhone/i) || !browser.match(/iPad/i) || !browser.match(/iPod/i) || !browser.match(/BlackBerry/i) || !browser.match(/Windows Phone/i)) {
+    if (!browser.match(/Android/i) || !browser.match(/webOS/i) || !browser.match(/iPhone/i) || !browser.match(/iPod/i) || !browser.match(/BlackBerry/i) || !browser.match(/Windows Phone/i)) {
         // Crear referencia al video
         const videoElement = document.getElementById(`video${trackNumber}`);
         if (videoElement) {
