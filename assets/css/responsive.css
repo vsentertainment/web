@@ -1,0 +1,14 @@
+.vevolog {
+    width: 100px;
+    margin-left: 2rem;
+}
+
+@media (max-width: 400px) {
+    .vevolog {
+        margin-left: 0;
+        margin-top: 3rem;
+    }
+    .vsmainlogo {
+        display: none;
+    }
+}
