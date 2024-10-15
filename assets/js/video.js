@@ -24,3 +24,11 @@ video.addEventListener('click', () => {
         playPauseButton.textContent = playtxt;
     }
 });
+
+document.addEventListener('visibilitychange', function () {
+    if (document.hidden) {
+        video.pause();
+    } else {
+        video.play();
+    }
+});

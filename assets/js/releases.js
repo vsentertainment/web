@@ -49,7 +49,7 @@ tracks.forEach((track, index) => {
 
     const browser = navigator.userAgent;
 
-    if (!browser.match(/Android/i) || !browser.match(/webOS/i) || !browser.match(/iPhone/i) || !browser.match(/iPod/i) || !browser.match(/BlackBerry/i) || !browser.match(/Windows Phone/i)) {
+    if (!browser.match(/Android|iPhone|iPad|iPod|webOs|BlackBerry|Windows Phone/i)) {
         // Crear referencia al video
         const videoElement = document.getElementById(`video${trackNumber}`);
         if (videoElement) {
@@ -71,6 +71,14 @@ tracks.forEach((track, index) => {
             videoElement.classList.add('d-none'); // Ocultar video
             videoElement.pause();
             videoElement.currentTime = 0; // Reiniciar video
+        });
+
+        container.addEventListener('click', () => {
+            if (videoElement.paused) {
+                videoElement.play();
+            } else {
+                videoElement.pause();
+            }
         });
     }
 });
