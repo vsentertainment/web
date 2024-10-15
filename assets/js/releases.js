@@ -47,26 +47,30 @@ tracks.forEach((track, index) => {
         linkElement.href = track.customLink || `https://vsmusic.ffm.to/${track.slug}`;
     }
 
-    // Crear referencia al video
-    const videoElement = document.getElementById(`video${trackNumber}`);
-    if (videoElement) {
-        videoElement.src = `../assets/img/tracks/videos/${track.slug}.mp4`; // Ruta del video correspondiente
-        videoElement.load();
-    }
+    const browser = navigator.userAgent;
 
-    // Mostrar video después de 3 segundos de mouseover
-    const container = imgElement.parentElement; // Obtener el contenedor
-    container.addEventListener('mouseover', () => {
+    if (!browser.match(/Android/i) || !browser.match(/webOS/i) || !browser.match(/iPhone/i) || !browser.match(/iPad/i) || !browser.match(/iPod/i) || !browser.match(/BlackBerry/i) || !browser.match(/Windows Phone/i)) {
+        // Crear referencia al video
+        const videoElement = document.getElementById(`video${trackNumber}`);
+        if (videoElement) {
+            videoElement.src = `../assets/img/tracks/videos/${track.slug}.mp4`; // Ruta del video correspondiente
+            videoElement.load();
+        }
+
+        // Mostrar video 
+        const container = imgElement.parentElement; // Obtener el contenedor
+        container.addEventListener('mouseover', () => {
             imgElement.classList.add('d-none'); // Ocultar imagen
             videoElement.classList.remove('d-none'); // Mostrar video
             videoElement.play();
-    });
+        });
 
-    // volver a la imagen en mouseout
-    container.addEventListener('mouseout', () => {
-        imgElement.classList.remove('d-none'); // Mostrar imagen
-        videoElement.classList.add('d-none'); // Ocultar video
-        videoElement.pause();
-        videoElement.currentTime = 0; // Reiniciar video
-    });
+        // volver a la imagen en mouseout
+        container.addEventListener('mouseout', () => {
+            imgElement.classList.remove('d-none'); // Mostrar imagen
+            videoElement.classList.add('d-none'); // Ocultar video
+            videoElement.pause();
+            videoElement.currentTime = 0; // Reiniciar video
+        });
+    }
 });
